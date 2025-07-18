@@ -1,15 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Kutulama modelini düzeltmek için */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif; /* Daha genel bir font */
+    font-family: Arial, sans-serif; 
 }
 
 .container {
-    background: url(backgroundimage.jpg) no-repeat center center/cover; /* Arka plan resmi ayarlaması */
+    background: url(backgroundimage.jpg) no-repeat center center/cover; 
     height: 100vh;
 }
 
@@ -17,86 +17,86 @@ body {
     width: 100%;
     height: 70px;
     background-color: lightskyblue;
-    display: flex; /* Flexbox'ı etkinleştir */
-    justify-content: space-between; /* Öğeleri iki yana yasla */
-    align-items: center; /* Öğeleri dikeyde ortala */
-    padding: 0 2%; /* Yan boşluklar */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 2%; 
 }
 
 .navbar .icon img {
-    width: 80px; /* Resmin genişliği */
-    display: block; /* Altındaki boşluğu kaldırmak için */
+    width: 80px; 
+    display: block; 
 }
 
 .navbar ul {
     list-style: none;
-    display: flex; /* Liste öğelerini yatayda hizala */
-    margin: 0; /* Float'ı kaldırdığımız için margin-right'a gerek yok */
+    display: flex; 
+    margin: 0; 
     padding: 0;
 }
-.skills-grid { /* Tüm yetkinlik ikonlarını sarmalayan ana kapsayıcı */
+.skills-grid { 
     display: flex;
-    flex-wrap: wrap; /* Öğeler sığmadığında alt satıra geçsin */
-    justify-content: center; /* Öğeleri yatayda ortala */
-    align-items: flex-start; /* Öğeleri dikeyde üste hizala */
-    gap: 40px; /* Her bir yetkinlik bloğu arasındaki boşluk */
-    padding: 20px; /* İç boşluk */
-    max-width: 1200px; /* Sayfanın ortasında maksimum genişlik */
-    margin: 20px auto; /* Ortalamak için */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 40px; 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 20px auto; 
 }
 
-.skill-item { /* Her bir ikon ve başlık çiftini sarmalayan blok */
+.skill-item { 
     display: flex;
-    flex-direction: column; /* İkonu ve başlığı alt alta sırala */
-    align-items: center; /* İkonu ve başlığı ortala */
+    flex-direction: column; 
+    align-items: center; 
     text-align: center;
-    margin-bottom: 20px; /* Yetkinlik blokları arasında dikey boşluk */
-    min-width: 150px; /* Her bir yetkinlik bloğu için minimum genişlik */
-    flex: 1 1 200px; /* Flex büyüyebilir, küçülebilir, varsayılan 200px genişlik */
+    margin-bottom: 20px; 
+    min-width: 150px; 
+    flex: 1 1 200px;
 }
 
-.skill-item img { /* Yetkinlik ikonlarının stili */
-    width: 120px; /* Masaüstü için ikonların boyutu */
-    height: auto; /* Oranı koru */
-    max-width: 100%; /* Kapsayıcıdan taşmamasını sağla */
-    margin-bottom: 10px; /* İkon ile başlık arasına boşluk */
+.skill-item img { 
+    width: 120px; 
+    height: auto; 
+    max-width: 100%; 
+    margin-bottom: 10px; 
 }
 
-.skill-item h2 { /* Yetkinlik başlıklarının stili */
-    color: azure; /* Başlık rengi (arka plana göre ayarlanabilir) */
+.skill-item h2 { 
+    color: azure; 
     font-size: 1.5em;
 }
 
-/* Mobil Cihazlar İçin Medya Sorgusu (768px ve altı) */
+
 @media (max-width: 768px) {
     .skills-grid {
-        gap: 20px; /* Mobil için boşluğu azalt */
+        gap: 20px; 
         padding: 10px;
     }
 
     .skill-item {
-        min-width: 100px; /* Mobil için minimum genişliği azalt */
-        flex: 1 1 120px; /* Mobil için flex genişliğini ayarla */
-        margin-bottom: 15px; /* Mobil yetkinlik blokları arasına boşluk */
+        min-width: 100px; 
+        flex: 1 1 120px; 
+        margin-bottom: 15px; 
     }
 
     .skill-item img {
-        width: 80px; /* Mobil için ikon boyutu */
+        width: 80px; 
         margin-bottom: 5px;
     }
 
     .skill-item h2 {
-        font-size: 1.1em; /* Mobil için başlık boyutunu küçült */
+        font-size: 1.1em; 
     }
 }
 
-/* Tablet boyutları için opsiyonel medya sorgusu (769px ile 1024px arası) */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .skills-grid {
         gap: 30px;
     }
     .skill-item img {
-        width: 100px; /* Tablet için ikon boyutu */
+        width: 100px; 
     }
 }
 
@@ -106,11 +106,11 @@ body {
 
 .navbar ul li a {
     color: azure;
-    text-decoration: none; /* Dotted yerine none daha yaygın */
+    text-decoration: none; 
     font-size: x-large;
     font-weight: bolder;
     padding: 6px 12px;
-    white-space: nowrap; /* Metinlerin sarılmasını engelle */
+    white-space: nowrap; 
 }
 
 .navbar ul li a:hover {
@@ -130,19 +130,19 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Küçük ekranlar için medya sorguları */
+
 @media (max-width: 768px) {
     .container .navbar {
-        flex-direction: column; /* Küçük ekranlarda dikey hizala */
-        height: auto; /* Yüksekliği içeriğe göre ayarla */
+        flex-direction: column; 
+        height: auto; 
         padding: 10px 2%;
     }
 
     .navbar ul {
-        flex-direction: column; /* Liste öğelerini dikey sırala */
+        flex-direction: column; 
         width: 100%;
-        text-align: center; /* Menü öğelerini ortala */
-        margin-top: 10px; /* İkon ile menü arasına boşluk */
+        text-align: center; 
+        margin-top: 10px; 
     }
 
     .navbar ul li {
@@ -151,8 +151,8 @@ body {
     }
 
     .navbar ul li a {
-        display: block; /* Tüm alanı kaplaması için */
+        display: block; 
         padding: 10px;
-        font-size: large; /* Font boyutunu küçült */
+        font-size: large; 
     }
 }
