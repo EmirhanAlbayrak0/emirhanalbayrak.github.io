@@ -72,3 +72,28 @@
 .container .box img{
     width: 5%;
 }
+@media (max-width: 768px) {
+    .container .navbar {
+        flex-direction: column; /* Küçük ekranlarda dikey hizala */
+        height: auto; /* Yüksekliği içeriğe göre ayarla */
+        padding: 10px 2%;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Liste öğelerini dikey sırala */
+        width: 100%;
+        text-align: center; /* Menü öğelerini ortala */
+        margin-top: 10px; /* İkon ile menü arasına boşluk */
+    }
+
+    .navbar ul li {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .navbar ul li a {
+        display: block; /* Tüm alanı kaplaması için */
+        padding: 10px;
+        font-size: large; /* Font boyutunu küçült */
+    }
+}
