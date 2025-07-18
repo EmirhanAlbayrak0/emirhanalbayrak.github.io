@@ -34,6 +34,71 @@ body {
     margin: 0; /* Float'ı kaldırdığımız için margin-right'a gerek yok */
     padding: 0;
 }
+.skills-grid { /* Tüm yetkinlik ikonlarını sarmalayan ana kapsayıcı */
+    display: flex;
+    flex-wrap: wrap; /* Öğeler sığmadığında alt satıra geçsin */
+    justify-content: center; /* Öğeleri yatayda ortala */
+    align-items: flex-start; /* Öğeleri dikeyde üste hizala */
+    gap: 40px; /* Her bir yetkinlik bloğu arasındaki boşluk */
+    padding: 20px; /* İç boşluk */
+    max-width: 1200px; /* Sayfanın ortasında maksimum genişlik */
+    margin: 20px auto; /* Ortalamak için */
+}
+
+.skill-item { /* Her bir ikon ve başlık çiftini sarmalayan blok */
+    display: flex;
+    flex-direction: column; /* İkonu ve başlığı alt alta sırala */
+    align-items: center; /* İkonu ve başlığı ortala */
+    text-align: center;
+    margin-bottom: 20px; /* Yetkinlik blokları arasında dikey boşluk */
+    min-width: 150px; /* Her bir yetkinlik bloğu için minimum genişlik */
+    flex: 1 1 200px; /* Flex büyüyebilir, küçülebilir, varsayılan 200px genişlik */
+}
+
+.skill-item img { /* Yetkinlik ikonlarının stili */
+    width: 120px; /* Masaüstü için ikonların boyutu */
+    height: auto; /* Oranı koru */
+    max-width: 100%; /* Kapsayıcıdan taşmamasını sağla */
+    margin-bottom: 10px; /* İkon ile başlık arasına boşluk */
+}
+
+.skill-item h2 { /* Yetkinlik başlıklarının stili */
+    color: azure; /* Başlık rengi (arka plana göre ayarlanabilir) */
+    font-size: 1.5em;
+}
+
+/* Mobil Cihazlar İçin Medya Sorgusu (768px ve altı) */
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 20px; /* Mobil için boşluğu azalt */
+        padding: 10px;
+    }
+
+    .skill-item {
+        min-width: 100px; /* Mobil için minimum genişliği azalt */
+        flex: 1 1 120px; /* Mobil için flex genişliğini ayarla */
+        margin-bottom: 15px; /* Mobil yetkinlik blokları arasına boşluk */
+    }
+
+    .skill-item img {
+        width: 80px; /* Mobil için ikon boyutu */
+        margin-bottom: 5px;
+    }
+
+    .skill-item h2 {
+        font-size: 1.1em; /* Mobil için başlık boyutunu küçült */
+    }
+}
+
+/* Tablet boyutları için opsiyonel medya sorgusu (769px ile 1024px arası) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills-grid {
+        gap: 30px;
+    }
+    .skill-item img {
+        width: 100px; /* Tablet için ikon boyutu */
+    }
+}
 
 .navbar ul li {
     padding: 8px;
