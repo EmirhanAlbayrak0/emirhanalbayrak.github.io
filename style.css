@@ -72,7 +72,7 @@
 .container .box img{
     width: 5%;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container .navbar {
         flex-direction: column; /* Küçük ekranlarda dikey hizala */
         height: auto; /* Yüksekliği içeriğe göre ayarla */
