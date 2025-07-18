@@ -1,78 +1,72 @@
-*{
-    margin:0 ;
+* {
+    margin: 0;
     padding: 0;
-}
-.container .center{
-
-    margin-left: 2%;
-    margin-top: 2%;
-    font-family: 'Courier New', Courier, monospace;
-    
-}
-.container .center2{
-    text-align: center;
-    margin-top: 2%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
-        
+    box-sizing: border-box; /* Kutulama modelini düzeltmek için */
 }
 
-   
+body {
+    font-family: Arial, sans-serif; /* Daha genel bir font */
+}
 
-.container{
-    background: url(backgroundimage.jpg);
+.container {
+    background: url(backgroundimage.jpg) no-repeat center center/cover; /* Arka plan resmi ayarlaması */
     height: 100vh;
-    
-    background-size: 100% 100%;
-
-}
-.navbar ul{
-    float: right;
-    margin-right: 20px;
- 
-}
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px;
-    
-    line-height: 55px;
-
-}
-.navbar ul li a{
-    color: azure;
-    text-decoration:dotted ;
-    font-size: x-large;
-    font-weight: bolder;
-    padding: 6px 12px ;
-
-}
-.navbar .icon{
-  
-    display: inline-block;
-   
-    margin-left: 2%;
-    margin-top: 20px;
-
-
 }
 
-.container .navbar{
+.container .navbar {
     width: 100%;
     height: 70px;
-    background-color:lightskyblue;
-    
+    background-color: lightskyblue;
+    display: flex; /* Flexbox'ı etkinleştir */
+    justify-content: space-between; /* Öğeleri iki yana yasla */
+    align-items: center; /* Öğeleri dikeyde ortala */
+    padding: 0 2%; /* Yan boşluklar */
 }
 
-.navbar ul li a:hover{
+.navbar .icon img {
+    width: 80px; /* Resmin genişliği */
+    display: block; /* Altındaki boşluğu kaldırmak için */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; /* Liste öğelerini yatayda hizala */
+    margin: 0; /* Float'ı kaldırdığımız için margin-right'a gerek yok */
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 8px;
+}
+
+.navbar ul li a {
+    color: azure;
+    text-decoration: none; /* Dotted yerine none daha yaygın */
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 6px 12px;
+    white-space: nowrap; /* Metinlerin sarılmasını engelle */
+}
+
+.navbar ul li a:hover {
     background-color: lightblue;
     border-radius: 1cm;
 }
 
-.container .box img{
-    width: 5%;
+.container .center {
+    margin-left: 2%;
+    margin-top: 2%;
+    font-family: 'Courier New', Courier, monospace;
 }
-@media (max-width: 600px) {
+
+.container .center2 {
+    text-align: center;
+    margin-top: 2%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Küçük ekranlar için medya sorguları */
+@media (max-width: 768px) {
     .container .navbar {
         flex-direction: column; /* Küçük ekranlarda dikey hizala */
         height: auto; /* Yüksekliği içeriğe göre ayarla */
